@@ -9,12 +9,11 @@ public class TodoService {
 	@Autowired
 	private TodoRepository repository;
 	public String testService(){
-		// Todo Entity 생성
-		TodoEntity entity = TodoEntity.builder().userId("user01").title("My first
-		todo item").build();
-		// Todo Entity 저장
+		
+		TodoEntity entity = TodoEntity.builder().userId("park Seeun").title("My first todo item").build();
+		
 		repository.save(entity);
-		// Todo Entity 검색
+		
 		TodoEntity savedEntity =
 		repository.searchByUserId(entity.getUserId()).get(0);
 		return savedEntity.getUserId();
